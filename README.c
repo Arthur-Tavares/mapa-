@@ -1,4 +1,3 @@
-# mapa-
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -140,35 +139,35 @@ void relatorioProjeto(base_projetos cadastro[MAX]){
 
 void imprimeAFazer (base_projetos cadastro[MAX])
 {
-	system("cls");
-	printf("***************************************");
-	printf("\n IMPRIMINDO OS A FAZER ");
-	printf("\n***************************************\n");
+	system ("cls");
+	printf("---------------------------------------");
+	printf("\nIMPRIME OS ''A FAZER''");
+	printf("\n---------------------------------------");
 	int vertical=1;
-	
-	if(posicao >= 1 && cadastro[vertical].status == 1){
-
-				printf("%d - %s - %s - %d - %d - %s - %s - %s - %f\n", cadastro[vertical].codigo,cadastro[vertical].nome,cadastro[vertical].descricao,cadastro[vertical].ano,cadastro[vertical].status,cadastro[vertical].gerente,cadastro[vertical].prazo,cadastro[vertical].setor,cadastro[vertical].orcamento);
-				vertical++;
-		
-			
+ 
+	if (posicao >= 1){
+		while(cadastro[vertical].status == 1){
+			printf("%d - %s - %s - %d - %d - %s - %s - %s - %f\n", cadastro[vertical].codigo,cadastro[vertical].nome,cadastro[vertical].descricao,cadastro[vertical].ano,cadastro[vertical].status,cadastro[vertical].gerente,cadastro[vertical].prazo,cadastro[vertical].setor,cadastro[vertical].orcamento);
+			vertical++;
+		}
+   
 	}else{
 		printf("\nSem Registros Cadastrados\n");
 	}	
 	system("Pause");
 }
-
 void imprimeFazendo (base_projetos cadastro[MAX])
 {
-	system("cls");
-	printf("***************************************");
-	printf("\n IMPRIMINDO OS EM ANDAMENTO ");
-	printf("\n***************************************\n");
+	system ("cls");
+	printf("---------------------------------------");
+	printf("\nIMPRIME OS ''Fazendo''");
+	printf("\n---------------------------------------");
 	int vertical=1;
-	
-	if(posicao >= 1 && cadastro[vertical].status == 2){		
-				printf("%d - %s - %s - %d - %d - %s - %s - %s - %f\n", cadastro[vertical].codigo,cadastro[vertical].nome,cadastro[vertical].descricao,cadastro[vertical].ano,cadastro[vertical].status,cadastro[vertical].gerente,cadastro[vertical].prazo,cadastro[vertical].setor,cadastro[vertical].orcamento);
-				vertical++;			
+	if (posicao >= 1){
+		if (cadastro[vertical].status == 2){
+			printf("%d - %s - %s - %d - %d - %s - %s - %s - %f\n", cadastro[vertical].codigo,cadastro[vertical].nome,cadastro[vertical].descricao,cadastro[vertical].ano,cadastro[vertical].status,cadastro[vertical].gerente,cadastro[vertical].prazo,cadastro[vertical].setor,cadastro[vertical].orcamento);
+			vertical++;
+		}
 	}else{
 		printf("\nSem Registros Cadastrados\n");
 	}	
@@ -176,20 +175,19 @@ void imprimeFazendo (base_projetos cadastro[MAX])
 }
 void imprimeConcluido (base_projetos cadastro[MAX])
 {
-	system("cls");
-	printf("***************************************");
-	printf("\n IMPRIMINDO OS CONCLUIDOS ");
-	printf("\n***************************************\n");
+	system ("cls");
+	printf("---------------------------------------");
+	printf("\nIMPRIME OS ''Concluidos''");
+	printf("\n---------------------------------------");
 	int vertical=1;
-	
-	if(posicao >= 1 && cadastro[vertical].status == 3){
-	
-				printf("%d - %s - %s - %d - %d - %s - %s - %s - %f\n", cadastro[vertical].codigo,cadastro[vertical].nome,cadastro[vertical].descricao,cadastro[vertical].ano,cadastro[vertical].status,cadastro[vertical].gerente,cadastro[vertical].prazo,cadastro[vertical].setor,cadastro[vertical].orcamento);
-				vertical++;
-			
-			
+	if (posicao >= 1){
+		if (cadastro[vertical].status == 3){
+			printf("%d - %s - %s - %d - %d - %s - %s - %s - %f\n", cadastro[vertical].codigo,cadastro[vertical].nome,cadastro[vertical].descricao,cadastro[vertical].ano,cadastro[vertical].status,cadastro[vertical].gerente,cadastro[vertical].prazo,cadastro[vertical].setor,cadastro[vertical].orcamento);
+			vertical++;
+		}
 	}else{
 		printf("\nSem Registros Cadastrados\n");
 	}	
 	system("Pause");
 }
+	
